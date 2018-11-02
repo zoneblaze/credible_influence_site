@@ -1,0 +1,61 @@
+/* BUZZ PANELS GLOBAL CSS v0.2 */
+/* --------------------------------------- */
+/* BOOTSTRAP GENERIC ELEMENTS:  */
+/* --------------------------------------- */
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: #f6921e;
+}
+
+a:hover {
+  color: #f9a94c;
+}
+
+/* --------------------------------------- */
+/* BOOTSTRAP BUTTONS:  */
+/* --------------------------------------- */
+.btn {
+  border: 0 none;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: 0 none;
+}
+
+.btn-primary {
+  background: #f6921e;
+  color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #f9a94c;
+}
+
+.btn-primary:active, .btn-primary.active {
+  background: #f6921e;
+  box-shadow: none;
+}
+
+/* --------------------------------------- */
+/* NAVBAR:  */
+/* --------------------------------------- */
+.navbar {
+  font-size: 14px;
+}
+
+/* --------------------------------------- */
+/* DROPDOWN ITEM  */
+/* --------------------------------------- */
+.dropdown-menu {
+  font-size: 14px;
+}
+
+.dropdown-item {
+  font-weight: 300;
+}

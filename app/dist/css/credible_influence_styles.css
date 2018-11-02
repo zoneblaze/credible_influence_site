@@ -8,11 +8,11 @@ html, body {
 }
 
 a {
-  color: #f6921e;
+  color: #304077;
 }
 
 a:hover {
-  color: #f9a94c;
+  color: #596ba6;
 }
 
 /* --------------------------------------- */
@@ -29,16 +29,16 @@ a:hover {
 }
 
 .btn-primary {
-  background: #f6921e;
+  background: #304077;
   color: #ffffff;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-  background: #f9a94c;
+  background: #596ba6;
 }
 
 .btn-primary:active, .btn-primary.active {
-  background: #f6921e;
+  background: #304077;
   box-shadow: none;
 }
 
@@ -58,4 +58,18 @@ a:hover {
 
 .dropdown-item {
   font-weight: 300;
+}
+
+/* --------------------------------------- */
+/* CONTENT  */
+/* --------------------------------------- */
+.banner {
+  background: #304077;
+  padding: 60px 0 50px 0;
+  color: white;
+  height: auto;
+}
+
+.typedquestions {
+  font-size: 30px;
 }

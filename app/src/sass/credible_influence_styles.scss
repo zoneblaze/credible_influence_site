@@ -1,0 +1,132 @@
+/* BUZZ PANELS GLOBAL CSS v0.2 */
+
+@import "compass";
+@import "compass/css3";
+@import "compass/utilities";
+
+//color palette
+$primarycolor: #304077;
+$primarycolor_hover: #596ba6;
+$secondarycolor1: #30c6c9;
+$secondarycolor1_hover: #50e1e4;
+$secondarycolor2: #ffffff;
+$secondarycolor2_hover: #ffffff;
+$dark: #404040;
+
+
+
+
+
+/* --------------------------------------- */
+/* BOOTSTRAP GENERIC ELEMENTS:  */
+/* --------------------------------------- */
+
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:300;
+}
+
+a {
+    color: $primarycolor;
+}
+a:hover {
+    color: $primarycolor_hover;
+}
+
+
+
+
+
+
+/* --------------------------------------- */
+/* BOOTSTRAP BUTTONS:  */
+/* --------------------------------------- */
+
+.btn {
+    border: 0 none;
+    font-size:14px;
+    font-weight:300;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: $primarycolor;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: $primarycolor_hover;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: $primarycolor;
+    box-shadow: none;
+}
+
+
+
+/* --------------------------------------- */
+/* NAVBAR:  */
+/* --------------------------------------- */
+
+.navbar {
+    font-size:14px;
+}
+
+
+
+/* --------------------------------------- */
+/* DROPDOWN ITEM  */
+/* --------------------------------------- */
+
+.dropdown-menu {
+    font-size:14px;
+}
+
+.dropdown-item {
+    font-weight:300;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/* CONTENT  */
+/* --------------------------------------- */
+
+
+
+//Banner
+//---------------------------------------
+.banner {
+    background:$primarycolor;
+    padding:60px 0 50px 0;
+    color:white;
+    height:auto;
+}
+
+.typedquestions{
+    font-size:30px;
+}

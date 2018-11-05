@@ -5,12 +5,15 @@
 @import "compass/utilities";
 
 //color palette
-$primarycolor: #304077;
-$primarycolor_hover: #596ba6;
-$secondarycolor1: #30c6c9;
-$secondarycolor1_hover: #50e1e4;
+$primarycolor: #21c6ca;
+$primarycolor_hover: #5adcdf;
+
+$secondarycolor1: #2f3e79;
+$secondarycolor1_hover: #5364a5;
+
 $secondarycolor2: #ffffff;
 $secondarycolor2_hover: #ffffff;
+
 $dark: #404040;
 
 
@@ -45,8 +48,10 @@ a:hover {
 
 .btn {
     border: 0 none;
-    font-size:14px;
+    font-size:16px;
     font-weight:300;
+    text-transform:uppercase;
+    font-weight:400;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -54,15 +59,30 @@ a:hover {
 }
 
 .btn-primary {
-    background: $primarycolor;
+    background: $secondarycolor1;
     color: #ffffff;
 }
  
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: $primarycolor_hover;
+    background: $secondarycolor1_hover;
 }
  
 .btn-primary:active, .btn-primary.active {
+    background: $secondarycolor1;
+    box-shadow: none;
+}
+
+
+.btn-secondary {
+    background: $primarycolor;
+    color: #ffffff;
+}
+ 
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
+    background: $primarycolor_hover;
+}
+ 
+.btn-secondary:active, .btn-secondary.active {
     background: $primarycolor;
     box-shadow: none;
 }
@@ -74,9 +94,17 @@ a:hover {
 /* --------------------------------------- */
 
 .navbar {
-    font-size:14px;
+    font-size:18px;
+    font-weight:bold;
+    background:$primarycolor !important;
 }
 
+.nav-link{
+    color:$secondarycolor1 !important;
+}
+.nav-link:hover{
+    color:$secondarycolor1_hover !important;
+}
 
 
 /* --------------------------------------- */
@@ -121,12 +149,141 @@ a:hover {
 //Banner
 //---------------------------------------
 .banner {
-    background:$primarycolor;
-    padding:60px 0 50px 0;
-    color:white;
+    background:white;
+    padding-top:100px;
+    padding-bottom:20px;
+    color:$primarycolor;
     height:auto;
 }
 
-.typedquestions{
-    font-size:30px;
+.banner_text_animation{
+    font-size:35px;
+
+    .weusedatato{
+        color: $secondarycolor1;
+        font-size:45px;
+        font-weight:bold;
+    }
+
+    .copy {
+        font-weight:400;
+    }
+
+    .blinking_cursor{
+        display:inline-block;
+        width:40;
+        height:50;
+        background:$secondarycolor1;
+        animation: blink-animation 0.5s steps(5, start) infinite;
+        -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
+    }
+
 }
+
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+
+
+//Tagline
+//---------------------------------------
+.tagline {
+    background:$secondarycolor1;
+    padding-top:30px;
+    padding-bottom:30px;
+    font-size:30px;
+    color:$primarycolor;
+    font-weight:400;
+    text-transform:uppercase;
+
+    .white{
+        color:white;
+    }
+}
+
+
+
+//Story & Advantage
+//---------------------------------------
+.story_advantage {
+    height:400px;
+
+    .copy{
+        padding-top:300px;
+        font-weight:bold;
+        font-size:25px;
+    }
+    
+    .story{
+        @include background(image-url("../dist/images/story.jpg"));
+        height:400px;
+        background-size: cover;
+
+        .copy{
+            color:white;
+        }
+    }
+
+    .advantage{
+        @include background(image-url("../dist/images/advantage.jpg"));
+        height:400px;
+        background-size: cover;
+
+        .copy{
+            color: $secondarycolor1;
+        }
+    }
+
+
+    
+}
+
+
+
+
+//AI Watson
+//---------------------------------------
+.ai_watson {
+    //background:green;
+    height:350px;
+    font-size:30px;
+    color:$primarycolor;
+    font-weight:400;
+    overflow:hidden;
+    color:white;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        //z-index:-100;
+    }
+
+    .video-text-over{
+        font-weight:300;
+        height:inherit;
+        position:absolute;
+        z-index:999;
+        width:100%;
+        left:0;
+        //background:orange;
+        margin-top:10%;
+    }
+
+    .poweredbywatson{
+        font-style: italic;
+        font-size:15px;
+    }
+}
+

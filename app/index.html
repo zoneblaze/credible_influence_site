@@ -24,10 +24,10 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="dist/images/logos/buzzlogo.svg" class="img-responsive" height="40"/>
+          <img src="dist/images/logos/ci_logo_nav.svg" class="img-responsive" height="40"/>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,19 @@
 
         <div class="collapse navbar-collapse justify-content-md-end" id="navbarsExample07">
           <ul class="navbar-nav">
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
               <div class="dropdown-menu" aria-labelledby="dropdown07">
                 <a class="dropdown-item" href="#">Command Centre</a>
@@ -58,7 +70,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Careers</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -84,102 +96,112 @@
     <main role="main">
 
 
-      <div class="banner">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <img src="dist/images/logos/credible_influence_banner_logo.jpg" class="img-responsive" width="100%" />
-            </div>
-            <div class="col-md-6">
-              <div class="typedquestions">
-                We use data to... Understand your current audience and the one you want to target.
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="container marketing" style="background: green;">
-
-        <!-- Three columns of text below the carousel -->
+      <!-- Banner -->
+      <div class="container banner">
         <div class="row">
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-
-
-        <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <div class="col-md-3">
+            <img src="dist/images/logos/logo_animated_banner.jpg" class="img-responsive" width="100%" />
           </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <div class="col-md-9">
+            <div class="banner_text_animation">
+              <div class="weusedatato">We use data to...</div>
+              <span class="copy"></span>
+              <div class="blinking_cursor">&nbsp;</div>
+            </div>
+            <button type="button" class="btn btn-primary mt-3">Learn More</button>
           </div>
         </div>
+      </div>
+      <!-- Banner -->
 
-        <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
 
-        <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <!-- tagline -->
+      <div class="container tagline">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            Content &bull; Social &bull; Audience: <span class="white">Intelligence</span>
           </div>
         </div>
+      </div>
+      <!-- tagline -->
 
-        <hr class="featurette-divider">
 
-        <!-- /END THE FEATURETTES -->
 
-      </div><!-- /.container -->
+      <!-- story & advantage -->
+      <div class="container story_advantage text-center">
+        <div class="row">
+          <div class="col-md-6 story">
+            <div class="copy">OUR STORY</div>
+            <button type="button" class="btn btn-secondary mt-2">Learn More</button>
+          </div>
+          <div class="col-md-6 advantage">
+            <div class="copy">OUR ADVANTAGE</div>
+            <button type="button" class="btn btn-primary mt-2">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <!-- story & advantage -->
+
+
+
+
+
+      <!-- tagline -->
+      <div class="container text-center ai_watson">
+        <div class="row">
+          <div class="col-md-12">
+            <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+                <source src="http://www.buzzradar.com/wp-content/uploads/2017/12/IBM-Watson_-Ambient-1.mp4" type="video/mp4">
+            </video>
+            <div class="video-text-over">
+              AI Generated Insights & Recommendations<br>
+              <div class="poweredbywatson">Powerd by Watson</div>
+              <button type="button" class="btn btn-secondary mt-3">Book A Test Drive</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tagline -->
+
+
+
+
+
+      <!-- AI watson -->
+<!--       <div class="container ai-watson">
+        <div class="row">
+          <div class="col-md-12">
+
+
+
+            <div class="ai_watson">
+              <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+                  <source src="http://www.buzzradar.com/wp-content/uploads/2017/12/IBM-Watson_-Ambient-1.mp4" type="video/mp4">
+              </video>
+              <div class="video-text-over">AI Generated Insights & Recommendations</div>
+            </div>
+
+              <div class="video-text-over">AI Generated Insights & Recommendations</div>
+
+
+            
+          </div>
+        </div>
+      </div> -->
+      <!-- AI watson -->
+
+
+
+
+
 
 
       <!-- FOOTER -->
       <footer class="container">
         <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2018 Credible Influence, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
     </main>
 
@@ -192,5 +214,7 @@
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="dist/js/vendor/holder.min.js"></script>
+
+    <script src="dist/js/credible_influence/banner.js"></script>
   </body>
 </html>

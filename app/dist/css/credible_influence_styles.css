@@ -8,11 +8,11 @@ html, body {
 }
 
 a {
-  color: #304077;
+  color: #21c6ca;
 }
 
 a:hover {
-  color: #596ba6;
+  color: #5adcdf;
 }
 
 /* --------------------------------------- */
@@ -20,8 +20,10 @@ a:hover {
 /* --------------------------------------- */
 .btn {
   border: 0 none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
@@ -29,16 +31,30 @@ a:hover {
 }
 
 .btn-primary {
-  background: #304077;
+  background: #2f3e79;
   color: #ffffff;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-  background: #596ba6;
+  background: #5364a5;
 }
 
 .btn-primary:active, .btn-primary.active {
-  background: #304077;
+  background: #2f3e79;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background: #21c6ca;
+  color: #ffffff;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
+  background: #5adcdf;
+}
+
+.btn-secondary:active, .btn-secondary.active {
+  background: #21c6ca;
   box-shadow: none;
 }
 
@@ -46,7 +62,17 @@ a:hover {
 /* NAVBAR:  */
 /* --------------------------------------- */
 .navbar {
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #21c6ca !important;
+}
+
+.nav-link {
+  color: #2f3e79 !important;
+}
+
+.nav-link:hover {
+  color: #5364a5 !important;
 }
 
 /* --------------------------------------- */
@@ -64,12 +90,105 @@ a:hover {
 /* CONTENT  */
 /* --------------------------------------- */
 .banner {
-  background: #304077;
-  padding: 60px 0 50px 0;
-  color: white;
+  background: white;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  color: #21c6ca;
   height: auto;
 }
 
-.typedquestions {
+.banner_text_animation {
+  font-size: 35px;
+}
+.banner_text_animation .weusedatato {
+  color: #2f3e79;
+  font-size: 45px;
+  font-weight: bold;
+}
+.banner_text_animation .copy {
+  font-weight: 400;
+}
+.banner_text_animation .blinking_cursor {
+  display: inline-block;
+  width: 40;
+  height: 50;
+  background: #2f3e79;
+  animation: blink-animation 0.5s steps(5, start) infinite;
+  -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+.tagline {
+  background: #2f3e79;
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-size: 30px;
+  color: #21c6ca;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.tagline .white {
+  color: white;
+}
+
+.story_advantage {
+  height: 400px;
+}
+.story_advantage .copy {
+  padding-top: 300px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.story_advantage .story {
+  background: url('../../../images/../dist/images/story.jpg');
+  height: 400px;
+  background-size: cover;
+}
+.story_advantage .story .copy {
+  color: white;
+}
+.story_advantage .advantage {
+  background: url('../../../images/../dist/images/advantage.jpg');
+  height: 400px;
+  background-size: cover;
+}
+.story_advantage .advantage .copy {
+  color: #2f3e79;
+}
+
+.ai_watson {
+  height: 350px;
+  font-size: 30px;
+  color: #21c6ca;
+  font-weight: 400;
+  overflow: hidden;
+  color: white;
+}
+.ai_watson video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.ai_watson .video-text-over {
+  font-weight: 300;
+  height: inherit;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  left: 0;
+  margin-top: 10%;
+}
+.ai_watson .poweredbywatson {
+  font-style: italic;
+  font-size: 15px;
 }

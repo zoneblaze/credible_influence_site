@@ -6,6 +6,7 @@ var Main = function () {
 
 
     var storyAdvantageCollapse = false;
+    var storyAdvantageSelected = null;
     
 
     var addStoryAdvantage = function(){
@@ -16,7 +17,6 @@ var Main = function () {
             var btn = $(this);
             var type = btn.data('type');
             
-            console.log(type);
             switch (type){
                 case 'story':
                     copy = '<h2 class="mb-4 title text-center">OUR STORY</h2> <p>Data without context and empathy is meaningless.</p> <p>We’ve spent the last 6 years designing and developing Buzz Radar a real-time insight platform for some of the biggest brands in the world. As well as providing cutting edge insight technology our clients have often asked us to help translate that insight, provide context and data driven advice to inform their strategy. So we’ve created Credible Influence to do just that.</p> <p>Whether it’s helping guide engaging creative content or helping predict trends that provides brand with game changing insight. Everything we do is based on state of the art data science.</p>';
@@ -26,23 +26,47 @@ var Main = function () {
                 break;
             }
 
-            if (storyAdvantageCollapse){
-                $('.story_advantage_copy').collapse('hide');                
-                storyAdvantageCollapse = false; 
-                setTimeout(function(){
-                    $('.story_advantage_copy').find('.dynamic-copy').html(copy);
-                    $('.story_advantage_copy').collapse('show');
-                    storyAdvantageCollapse = true;
-                },1000);
+            if (type != storyAdvantageSelected){
+                if (storyAdvantageCollapse){
+                    $('.story_advantage_copy').collapse('hide');                
+                    storyAdvantageCollapse = false; 
+                    setTimeout(function(){
+                        applyCopyAnimate(copy)
+                    },1000);
+                }else{
+                    applyCopyAnimate(copy)
+                }
             }else{
-                $('.story_advantage_copy').find('.dynamic-copy').html(copy);
-                $('.story_advantage_copy').collapse('show');
-                storyAdvantageCollapse = true;
+                $('.story_advantage_copy').collapse('hide');                
+                storyAdvantageCollapse = false;
             }
 
+            storyAdvantageSelected = type;
+            
+        });
 
-            
-            
+        function applyCopyAnimate(copy){
+            $('.story_advantage_copy').find('.dynamic-copy').html(copy);
+            $('.story_advantage_copy').collapse('show');
+            storyAdvantageCollapse = true;
+
+            $('html, body').animate({
+                scrollTop: $('.story_advantage_copy').offset().top - 50
+            }, 1000);
+        }
+
+    };
+
+
+
+    var setScrollTop = function() {
+
+        $('#backtop,.navbar-brand').click(function(e){
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1000);
+
         });
 
     };
@@ -54,6 +78,7 @@ var Main = function () {
     return {
         init: function () {
         	addStoryAdvantage();
+            setScrollTop();
         }
     };
 }();

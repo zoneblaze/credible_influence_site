@@ -41,7 +41,6 @@ a:hover {
 
 
 
-
 /* --------------------------------------- */
 /* BOOTSTRAP BUTTONS:  */
 /* --------------------------------------- */
@@ -163,8 +162,9 @@ a:hover {
 }
 
 .banner_text_animation{
-    font-size:35px;
-    //height:170px;
+    font-size:30px;
+    line-height:140%;
+    height:220px;
     //background: green;
 
     .weusedatato{
@@ -309,6 +309,17 @@ a:hover {
 
 
 
+//Clients
+//---------------------------------------
+.clients {
+    padding:40px 0;
+    background:$primarycolor;
+    color:white;
+}
+
+
+
+
 
 
 
@@ -347,6 +358,8 @@ a:hover {
 
             h6{
                 margin-top:20px !important;
+                padding:0 80px;
+                font-size:20px;
             }
         }
     }
@@ -364,7 +377,7 @@ a:hover {
 
     .banner_text_animation{
         .weusedatato{
-            font-size:40px;
+            font-size:35px;
         }
         .copy {
             font-size:25px;
@@ -372,4 +385,23 @@ a:hover {
         }
     }
 
+    .dynamic-copy{
+        text-align: center;
+        padding:0 30px;
+    }
+
+    .ai_watson {
+        height:200px;
+        font-size:20px;
+
+        .video-text-over{
+            //background:orange;
+        }
+
+        .poweredbywatson{
+            font-style: italic;
+            font-size:15px;
+        }
+
+    }
 }

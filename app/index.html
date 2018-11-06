@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.png">
@@ -20,44 +20,23 @@
   <body>
 
 
-
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="dist/images/logos/ci_logo_nav.svg" class="img-responsive" height="40"/>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarMain" aria-controls="navBarMain" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-md-end" id="navbarsExample07">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+        <div id="navBarMain" class="collapse navbar-collapse justify-content-md-end">
+          <!-- This will be filled in JavaScript nav.js -->
         </div>
       </div>
     </nav>
-
-
-
-
-
-
-
-
-
-
+    <!-- Navigation -->
+  
 
 
 
@@ -149,7 +128,7 @@
       <div class="container-fluid text-center ai_watson">
         <div class="row">
           <div class="col-md-12">
-            <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+            <video loop muted autoplay poster="dist/images/videoframe.jpg" class="fullscreen-bg__video">
                 <source src="http://www.buzzradar.com/wp-content/uploads/2017/12/IBM-Watson_-Ambient-1.mp4" type="video/mp4">
             </video>
             <div class="video-text-over">
@@ -225,13 +204,55 @@
 
 
 
+      <!-- Services -->
+      <div class="container-fluid clients">
+        <div class="row">
+
+          <div class="container">
+
+
+              <h2 class="mb-4 text-center">OUR CLIENTS</h2>
+
+              <div class="row text-center">
+                
+                <div class="col-md-2">
+                  <img src="dist/images/clients/fx.png" class="img-responsive img-thumbnail"/>
+                </div>
+                <div class="col-md-2">
+                  <img src="dist/images/clients/heineken.png" class="img-responsive img-thumbnail"/>
+                </div>
+                <div class="col-md-2">
+                  <img src="dist/images/clients/ibm.png" class="img-responsive img-thumbnail"/>
+                </div>
+                <div class="col-md-2">
+                  <img src="dist/images/clients/marks_and_spencer.png" class="img-responsive img-thumbnail"/>
+                </div>
+                <div class="col-md-2">
+                  <img src="dist/images/clients/mediacom.png" class="img-responsive img-thumbnail"/>
+                </div>
+                <div class="col-md-2">
+                  <img src="dist/images/clients/wpp.png" class="img-responsive img-thumbnail"/>
+                </div>
+
+              </div>
+
+  
+
+          </div>
+
+        </div>
+      </div>
+      <!-- Services -->
+
+
+
 
 
 
 
       <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
+      <footer class="container mt-3">
+        <p class="float-right"><a id="backtop" href="#">Back to top</a></p>
         <p>&copy; 2018 Credible Influence, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
     </main>
@@ -239,13 +260,14 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="dist/js/vendor/popper.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="dist/js/vendor/holder.min.js"></script>
 
+    <script src="dist/js/credible_influence/nav.js"></script>
     <script src="dist/js/credible_influence/banner.js"></script>
     <script src="dist/js/credible_influence/main.js"></script>
   </body>

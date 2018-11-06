@@ -105,7 +105,9 @@ a:hover {
 }
 
 .banner_text_animation {
-  font-size: 35px;
+  font-size: 30px;
+  line-height: 140%;
+  height: 220px;
 }
 .banner_text_animation .weusedatato {
   color: #2f3e79;
@@ -202,6 +204,12 @@ a:hover {
   margin-top: 20px !important;
 }
 
+.clients {
+  padding: 40px 0;
+  background: #21c6ca;
+  color: white;
+}
+
 /* --------------------------------------- */
 /* MEDIA QUERIES  */
 /* --------------------------------------- */
@@ -212,6 +220,8 @@ a:hover {
   }
   .services .icon-text h6 {
     margin-top: 20px !important;
+    padding: 0 80px;
+    font-size: 20px;
   }
 
   .banner img {
@@ -223,10 +233,24 @@ a:hover {
   }
 
   .banner_text_animation .weusedatato {
-    font-size: 40px;
+    font-size: 35px;
   }
   .banner_text_animation .copy {
     font-size: 25px;
     font-weight: 400;
+  }
+
+  .dynamic-copy {
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  .ai_watson {
+    height: 200px;
+    font-size: 20px;
+  }
+  .ai_watson .poweredbywatson {
+    font-style: italic;
+    font-size: 15px;
   }
 }

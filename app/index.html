@@ -13,9 +13,6 @@
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
-
     <!-- BuzzRadar CSS -->
     <link href="dist/css/credible_influence_styles.css" rel="stylesheet">
 
@@ -47,30 +44,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown07">
-                <a class="dropdown-item" href="#">Command Centre</a>
-                <a class="dropdown-item" href="#">Relay</a>
-              </div>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Case Studies <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown07">
-                <a class="dropdown-item" href="#">Contact Us</a>
-                <a class="dropdown-item" href="#">FAQ</a>
-                <a class="dropdown-item" href="#">About Us</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Careers</a>
-            </li> -->
           </ul>
         </div>
       </div>
@@ -97,19 +70,27 @@
 
 
       <!-- Banner -->
-      <div class="container banner">
+      <div class="container-fluid banner" style="background: url(dist/images/header_background.png);background-size: cover;">
         <div class="row">
-          <div class="col-md-3">
-            <img src="dist/images/logos/logo_animated_banner.jpg" class="img-responsive" width="100%" />
-          </div>
-          <div class="col-md-9">
-            <div class="banner_text_animation">
-              <div class="weusedatato">We use data to...</div>
-              <span class="copy"></span>
-              <div class="blinking_cursor">&nbsp;</div>
+
+          <div class="container banner-inner-container">
+            <div class="row">
+
+              <div class="col-md-3 text-center">
+                <img src="dist/images/logos/logo_animated_banner.gif" class="img-responsive" width="100%" />
+              </div>
+              <div class="col-md-9">
+                <div class="banner_text_animation">
+                  <div class="weusedatato">We use data to...</div>
+                  <span class="copy"></span>
+                  <div class="blinking_cursor">&nbsp;</div>
+                </div>
+                <button type="button" class="btn btn-primary mt-3">Learn More</button>
+              </div>
+
             </div>
-            <button type="button" class="btn btn-primary mt-3">Learn More</button>
           </div>
+
         </div>
       </div>
       <!-- Banner -->
@@ -118,7 +99,7 @@
 
 
       <!-- tagline -->
-      <div class="container tagline">
+      <div class="container-fluid tagline">
         <div class="row">
           <div class="col-md-12 text-center">
             Content &bull; Social &bull; Audience: <span class="white">Intelligence</span>
@@ -130,15 +111,13 @@
 
 
       <!-- story & advantage -->
-      <div class="container story_advantage text-center">
+      <div class="container-fluid story_advantage text-center">
         <div class="row">
-          <div class="col-md-6 story">
-            <div class="copy">OUR STORY</div>
-            <button type="button" class="btn btn-secondary mt-2">Learn More</button>
+          <div class="col-md-6 story" style="background: url(dist/images/story.jpg);background-size: cover;">
+            <button type="button" class="btn btn-secondary" data-type="story">Our Story</button>
           </div>
-          <div class="col-md-6 advantage">
-            <div class="copy">OUR ADVANTAGE</div>
-            <button type="button" class="btn btn-primary mt-2">Learn More</button>
+          <div class="col-md-6 advantage" style="background: url(dist/images/advantage.jpg);background-size: cover;">
+            <button type="button" class="btn btn-secondary" data-type="advantage">Our Advantage</button>
           </div>
         </div>
       </div>
@@ -147,9 +126,27 @@
 
 
 
+      <!-- story & advantage COPY -->
+      <div class="container collapse story_advantage_copy">
+        <div class="row">
+          <div class="offset-md-2 col-md-8 offset-md-2 py-5">
+            
+              <div class="dynamic-copy">
+                <!-- This will be filled dynamically in Javascript main.js -->
+              </div>
+            
+          </div>
+        </div>
+      </div>
+      <!-- story & advantage COPY -->
 
-      <!-- tagline -->
-      <div class="container text-center ai_watson">
+
+
+
+
+
+      <!-- ai watson -->
+      <div class="container-fluid text-center ai_watson">
         <div class="row">
           <div class="col-md-12">
             <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
@@ -163,34 +160,68 @@
           </div>
         </div>
       </div>
-      <!-- tagline -->
+      <!-- ai watson -->
 
 
 
 
-
-      <!-- AI watson -->
-<!--       <div class="container ai-watson">
+      <!-- Services -->
+      <div class="container-fluid services">
         <div class="row">
-          <div class="col-md-12">
 
+          <div class="container">
 
+            <h2 class="mb-4 text-center">OUR SERVICES</h2>
 
-            <div class="ai_watson">
-              <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-                  <source src="http://www.buzzradar.com/wp-content/uploads/2017/12/IBM-Watson_-Ambient-1.mp4" type="video/mp4">
-              </video>
-              <div class="video-text-over">AI Generated Insights & Recommendations</div>
+            <!-- First row of Services -->
+            <div class="row text-center">
+              <div class="col-md-3 mb-3 icon-text">
+                <img src="dist/images/logos/services/social_audits.svg" class="img-responsive" />
+                <h6>Social Audits & Data Driven Strategy</h6>
+              </div>
+              <div class="col-md-3 mb-3 icon-text">
+                <img src="dist/images/logos/services/competitor_analysis.svg" class="img-responsive" />
+                <h6>Competitor Analysis</h6> 
+              </div>
+              <div class="col-md-3 mb-3 icon-text">
+                <img src="dist/images/logos/services/content_optimisation.svg" class="img-responsive" />
+                <h6>Content Optimisation</h6>  
+              </div>
+              <div class="col-md-3 mb-3 icon-text">
+                <img src="dist/images/logos/services/partner_selection.svg" class="img-responsive" />
+                <h6>Partners selection & Influencer Identification</h6>  
+              </div>
             </div>
+            <!-- First row of Services -->
 
-              <div class="video-text-over">AI Generated Insights & Recommendations</div>
-
+            <!-- Second row of Services -->
+            <div class="row text-center">
+              <div class="col-md-3 mb-3 icon-text">
+                <img src="dist/images/logos/services/brand_reputation.svg" class="img-responsive" />
+                <h6>Brand Reputation Monitoring and Management</h6>
+              </div>
+              <div class="col-md-3 mb-3 icon-text">
+                <img src="dist/images/logos/services/deep_analysis.svg" class="img-responsive" />
+                <h6>Deep Audience Analysis</h6> 
+              </div>
+              <div class="col-md-3 mb-3 icon-text">
+                <img src="dist/images/logos/services/influencer_verification.svg" class="img-responsive" />
+                <h6>Influencer verification and fraud detection</h6>  
+              </div>
+              <div class="col-md-3 mb-3 icon-text">
+                <img src="dist/images/logos/services/tactical_advice.svg" class="img-responsive" />
+                <h6>Tactical social content advice and consultation</h6>  
+              </div>
+            </div>
+            <!-- Second row of Services -->
 
             
+
           </div>
+
         </div>
-      </div> -->
-      <!-- AI watson -->
+      </div>
+      <!-- Services -->
 
 
 
@@ -216,5 +247,6 @@
     <script src="dist/js/vendor/holder.min.js"></script>
 
     <script src="dist/js/credible_influence/banner.js"></script>
+    <script src="dist/js/credible_influence/main.js"></script>
   </body>
 </html>

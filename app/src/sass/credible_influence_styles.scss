@@ -103,7 +103,7 @@ a:hover {
     color:$secondarycolor1 !important;
 }
 .nav-link:hover{
-    color:$secondarycolor1_hover !important;
+    color:white !important;
 }
 
 
@@ -149,15 +149,23 @@ a:hover {
 //Banner
 //---------------------------------------
 .banner {
-    background:white;
     padding-top:100px;
     padding-bottom:20px;
     color:$primarycolor;
     height:auto;
+    @include background-size(cover);
+
+}
+
+.banner-inner-container{
+    width:70%;
+    //height:300px;
 }
 
 .banner_text_animation{
     font-size:35px;
+    //height:170px;
+    //background: green;
 
     .weusedatato{
         color: $secondarycolor1;
@@ -171,8 +179,8 @@ a:hover {
 
     .blinking_cursor{
         display:inline-block;
-        width:40;
-        height:50;
+        width:5px;
+        height:45px;
         background:$secondarycolor1;
         animation: blink-animation 0.5s steps(5, start) infinite;
         -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
@@ -216,7 +224,6 @@ a:hover {
 //Story & Advantage
 //---------------------------------------
 .story_advantage {
-    height:400px;
 
     .copy{
         padding-top:300px;
@@ -225,28 +232,20 @@ a:hover {
     }
     
     .story{
-        @include background(image-url("../dist/images/story.jpg"));
         height:400px;
-        background-size: cover;
-
-        .copy{
-            color:white;
-        }
     }
 
     .advantage{
-        @include background(image-url("../dist/images/advantage.jpg"));
         height:400px;
-        background-size: cover;
-
-        .copy{
-            color: $secondarycolor1;
-        }
     }
 
-
+    button{
+        margin-top:300px !important;
+    }
     
 }
+
+
 
 
 
@@ -287,3 +286,90 @@ a:hover {
     }
 }
 
+
+
+//Services
+//---------------------------------------
+.services {
+    padding:40px 0;
+    background:$secondarycolor1;
+    color:white;
+
+    .icon-text{
+        img{
+            width:70% !important;
+        }
+
+        h6{
+            margin-top:20px !important;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/* MEDIA QUERIES  */
+/* --------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .services {
+        .icon-text{
+            img{
+                width:40% !important;
+            }
+
+            h6{
+                margin-top:20px !important;
+            }
+        }
+    }
+
+
+    .banner{
+        img{
+            width:60%;
+        }
+    }
+
+    .banner-inner-container{
+        width:90%;
+    }
+
+    .banner_text_animation{
+        .weusedatato{
+            font-size:40px;
+        }
+        .copy {
+            font-size:25px;
+            font-weight:400;
+        }
+    }
+
+}

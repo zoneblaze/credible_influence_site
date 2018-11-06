@@ -106,13 +106,14 @@ a:hover {
 
 .banner_text_animation {
   font-size: 30px;
-  line-height: 140%;
+  line-height: 150%;
   height: 220px;
 }
 .banner_text_animation .weusedatato {
   color: #2f3e79;
   font-size: 45px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 .banner_text_animation .copy {
   font-weight: 400;

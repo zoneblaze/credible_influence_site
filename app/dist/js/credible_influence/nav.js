@@ -42,6 +42,7 @@ var Nav = function () {
         });
 
         $('.nav-item > a').click(function(e){
+            $('#navBarMain').collapse('hide');
             e.preventDefault();
             var slug = $(this).data('slug');
             var targetdomid = $(this).data('targetdomid');

@@ -119,7 +119,7 @@ var Main = function () {
             console.log("vamos a ver...", imgIcon,  imgIcon.get(0))
             bootbox.dialog({
                     title: servicesArray[id].title,
-                    message: servicesArray[id].copy + '<img src="'+imgIcon.attr('src')+'" class="img-fluid watermark" />',
+                    message: '<img src="'+imgIcon.attr('src')+'" class="img-fluid tinyicon" />' + servicesArray[id].copy + '<img src="'+imgIcon.attr('src')+'" class="img-fluid watermark" />',
                     size: 'medium',
                     closeButton: false,
                     buttons: {

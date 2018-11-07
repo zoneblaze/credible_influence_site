@@ -5,6 +5,7 @@
 html, body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 a {
@@ -18,11 +19,7 @@ a:hover {
 input {
   border: 0 !important;
   box-shadow: none;
-  background: #e5e5e5 !important;
-}
-
-footer {
-  font-size: 12px;
+  background: #eee !important;
 }
 
 /* --------------------------------------- */
@@ -56,6 +53,8 @@ footer {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   background: #2f3e79;
   color: #21c6ca;
+  outline: none !important;
+  box-shadow: none;
 }
 
 .btn-primary:active, .btn-primary.active {
@@ -89,8 +88,14 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.15;
+  opacity: 0.1;
   width: 100%;
+}
+.modal-body img.tinyicon {
+  float: left;
+  margin: 0 20px 0 0;
+  display: block;
+  width: 100px;
 }
 
 /* --------------------------------------- */
@@ -227,7 +232,7 @@ footer {
   margin-top: 8%;
 }
 .ai_watson .video-text-over span {
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
   color: #2f3e79;
   padding: 0 15px;
 }
@@ -268,6 +273,21 @@ footer {
 }
 .contact label {
   font-weight: bold;
+}
+
+footer {
+  font-size: 12px;
+  background: #2f3e79;
+  color: white;
+  padding: 20px 0 5px 0;
+}
+footer .buzzlogo {
+  position: absolute;
+  top: -10px;
+  right: 100px;
+}
+footer .buzzlogo img {
+  height: 32px;
 }
 
 /* --------------------------------------- */

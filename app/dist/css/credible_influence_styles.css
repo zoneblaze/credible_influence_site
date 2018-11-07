@@ -15,19 +15,37 @@ a:hover {
   color: #5adcdf;
 }
 
+input {
+  border: 0 !important;
+  box-shadow: none;
+  background: #e5e5e5 !important;
+}
+
+footer {
+  font-size: 12px;
+}
+
 /* --------------------------------------- */
 /* BOOTSTRAP BUTTONS:  */
 /* --------------------------------------- */
 .btn {
   border: 0 none;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   text-transform: uppercase;
   font-weight: 400;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.btn-sm {
+  font-size: 14px;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
-  outline: 0 none;
+  outline: none !important;
+  box-shadow: none;
 }
 
 .btn-primary {
@@ -36,7 +54,8 @@ a:hover {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-  background: #5364a5;
+  background: #2f3e79;
+  color: #21c6ca;
 }
 
 .btn-primary:active, .btn-primary.active {
@@ -46,7 +65,7 @@ a:hover {
 
 .btn-secondary {
   background: #21c6ca;
-  color: #ffffff;
+  color: #2f3e79;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
@@ -56,6 +75,22 @@ a:hover {
 .btn-secondary:active, .btn-secondary.active {
   background: #21c6ca;
   box-shadow: none;
+}
+
+.modal-header {
+  background: #21c6ca;
+  color: white;
+}
+
+.modal-body {
+  overflow: hidden;
+}
+.modal-body img.watermark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.15;
+  width: 100%;
 }
 
 /* --------------------------------------- */
@@ -89,6 +124,10 @@ a:hover {
 /* --------------------------------------- */
 /* CONTENT  */
 /* --------------------------------------- */
+.section-title {
+  font-size: 25px;
+}
+
 .banner {
   padding-top: 100px;
   padding-bottom: 20px;
@@ -105,9 +144,9 @@ a:hover {
 }
 
 .banner_text_animation {
-  font-size: 30px;
+  font-size: 23px;
   line-height: 150%;
-  height: 220px;
+  height: 190px;
 }
 .banner_text_animation .weusedatato {
   color: #2f3e79;
@@ -121,7 +160,7 @@ a:hover {
 .banner_text_animation .blinking_cursor {
   display: inline-block;
   width: 5px;
-  height: 45px;
+  height: 32px;
   background: #2f3e79;
   animation: blink-animation 0.5s steps(5, start) infinite;
   -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
@@ -166,10 +205,8 @@ a:hover {
 }
 
 .ai_watson {
-  height: 350px;
-  font-size: 30px;
+  height: 280px;
   color: #21c6ca;
-  font-weight: 400;
   overflow: hidden;
   color: white;
 }
@@ -180,17 +217,24 @@ a:hover {
   width: 100%;
 }
 .ai_watson .video-text-over {
+  font-size: 40px;
   font-weight: 300;
   height: inherit;
   position: absolute;
   z-index: 999;
   width: 100%;
   left: 0;
-  margin-top: 10%;
+  margin-top: 8%;
+}
+.ai_watson .video-text-over span {
+  background: white;
+  color: #2f3e79;
+  padding: 0 15px;
 }
 .ai_watson .poweredbywatson {
   font-style: italic;
-  font-size: 15px;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 .services {
@@ -198,11 +242,17 @@ a:hover {
   background: #2f3e79;
   color: white;
 }
+.services .icon-text {
+  cursor: pointer;
+}
 .services .icon-text img {
-  width: 70% !important;
+  width: 50% !important;
 }
 .services .icon-text h6 {
-  margin-top: 20px !important;
+  margin-top: 10px !important;
+}
+.services .icon-text:hover img {
+  fill: red;
 }
 
 .clients {
@@ -211,18 +261,26 @@ a:hover {
   color: white;
 }
 
+.contact {
+  padding: 40px 0;
+  background: white;
+  color: #2f3e79;
+}
+.contact label {
+  font-weight: bold;
+}
+
 /* --------------------------------------- */
 /* MEDIA QUERIES  */
 /* --------------------------------------- */
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .services .icon-text img {
-    width: 40% !important;
+  .services .services-inner-container {
+    width: 90%;
   }
   .services .icon-text h6 {
-    margin-top: 20px !important;
-    padding: 0 80px;
-    font-size: 20px;
+    margin-top: 10px !important;
+    font-size: 18px;
   }
 
   .banner img {
@@ -233,6 +291,9 @@ a:hover {
     width: 90%;
   }
 
+  .banner_text_animation {
+    height: 210px;
+  }
   .banner_text_animation .weusedatato {
     font-size: 35px;
   }
@@ -250,8 +311,20 @@ a:hover {
     height: 200px;
     font-size: 20px;
   }
+  .ai_watson .video-text-over {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 18%;
+  }
   .ai_watson .poweredbywatson {
-    font-style: italic;
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .clients img {
+    margin-bottom: 15px;
+  }
+
+  .contact {
+    width: 90%;
   }
 }

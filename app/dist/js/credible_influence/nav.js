@@ -24,7 +24,13 @@ var Nav = function () {
         {
             "slug" : "contact",
             "label" : "Contact",
+            "targetDomId" : ".contact",
+        },
+        {
+            "slug" : "ourplatform",
+            "label" : "Our Platform",
             "targetDomId" : false,
+            "url" : "http://www.buzzradar.com"
         }
     ];
 
@@ -38,7 +44,7 @@ var Nav = function () {
         domHolder.append(ul);
         $.each(navArray, function( index, value ) {
           //console.log( index + ": " + value.label );
-          ul.append('<li class="nav-item"><a class="nav-link" href="#" data-slug="'+value.slug+'" data-targetdomid="'+value.targetDomId+'">'+value.label+'</a></li>');
+          ul.append('<li class="nav-item"><a class="nav-link" href="#" data-slug="'+value.slug+'" data-targetdomid="'+value.targetDomId+'" data-url="'+value.url+'">'+value.label+'</a></li>');
         });
 
         $('.nav-item > a').click(function(e){
@@ -46,11 +52,15 @@ var Nav = function () {
             e.preventDefault();
             var slug = $(this).data('slug');
             var targetdomid = $(this).data('targetdomid');
+            var url = $(this).data('url');
             console.log(slug,targetdomid);
             if (targetdomid){
                 $('html, body').animate({
                     scrollTop: $(targetdomid).offset().top - 50
                 }, 1000);
+            }else{
+                console.log("loading external URL ->", url);
+                window.open(url);
             }
         });
 

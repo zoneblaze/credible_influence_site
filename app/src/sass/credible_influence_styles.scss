@@ -37,7 +37,15 @@ a:hover {
     color: $primarycolor_hover;
 }
 
+input {
+    border:0 !important;
+    box-shadow: none;
+    background:#e5e5e5 !important;
+}
 
+footer{
+    font-size:12px;
+}
 
 
 
@@ -47,14 +55,20 @@ a:hover {
 
 .btn {
     border: 0 none;
-    font-size:16px;
+    font-size:20px;
     font-weight:300;
     text-transform:uppercase;
     font-weight:400;
+    @include border-radius(10px);
+}
+
+.btn-sm {
+    font-size:14px;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
+    outline: none !important;
+    box-shadow: none;
 }
 
 .btn-primary {
@@ -63,7 +77,8 @@ a:hover {
 }
  
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: $secondarycolor1_hover;
+    background: $secondarycolor1;
+    color:$primarycolor;
 }
  
 .btn-primary:active, .btn-primary.active {
@@ -74,7 +89,7 @@ a:hover {
 
 .btn-secondary {
     background: $primarycolor;
-    color: #ffffff;
+    color: $secondarycolor1;
 }
  
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
@@ -86,6 +101,21 @@ a:hover {
     box-shadow: none;
 }
 
+.modal-header{
+    background:$primarycolor;
+    color: white;
+}
+.modal-body{
+    overflow:hidden;
+
+    img.watermark{
+        position:absolute;
+        top:0;
+        left:0;
+        opacity:0.15;
+        width:100%;
+    }
+}
 
 
 /* --------------------------------------- */
@@ -143,7 +173,9 @@ a:hover {
 /* CONTENT  */
 /* --------------------------------------- */
 
-
+.section-title{
+    font-size:25px;
+}
 
 //Banner
 //---------------------------------------
@@ -162,9 +194,9 @@ a:hover {
 }
 
 .banner_text_animation{
-    font-size:30px;
+    font-size:23px;
     line-height:150%;
-    height:220px;
+    height:190px;
     //background: green;
 
     .weusedatato{
@@ -181,7 +213,7 @@ a:hover {
     .blinking_cursor{
         display:inline-block;
         width:5px;
-        height:45px;
+        height:32px;
         background:$secondarycolor1;
         animation: blink-animation 0.5s steps(5, start) infinite;
         -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
@@ -255,10 +287,8 @@ a:hover {
 //---------------------------------------
 .ai_watson {
     //background:green;
-    height:350px;
-    font-size:30px;
+    height:280px;
     color:$primarycolor;
-    font-weight:400;
     overflow:hidden;
     color:white;
 
@@ -271,6 +301,7 @@ a:hover {
     }
 
     .video-text-over{
+        font-size:40px;
         font-weight:300;
         height:inherit;
         position:absolute;
@@ -278,12 +309,20 @@ a:hover {
         width:100%;
         left:0;
         //background:orange;
-        margin-top:10%;
+        margin-top:8%;
+
+        span{
+            background:rgba(255,255,255,1);
+            color:$secondarycolor1;
+            padding:0 15px;
+            //@include border-radius(10px);
+        }
     }
 
     .poweredbywatson{
         font-style: italic;
-        font-size:15px;
+        font-size:24px;
+        font-weight:300;
     }
 }
 
@@ -296,13 +335,26 @@ a:hover {
     background:$secondarycolor1;
     color:white;
 
+    .services-inner-container{
+        //position:absolute;
+    }
+
     .icon-text{
+        cursor:pointer;
+
         img{
-            width:70% !important;
+            width:50% !important;
         }
 
         h6{
-            margin-top:20px !important;
+            margin-top:10px !important;
+            //background:orange;
+        }
+    }
+
+    .icon-text:hover{
+        img{
+            fill: red;
         }
     }
 }
@@ -316,6 +368,21 @@ a:hover {
     padding:40px 0;
     background:$primarycolor;
     color:white;
+}
+
+
+
+
+//Contact
+//---------------------------------------
+.contact {
+    padding:40px 0;
+    background:white;
+    color:$secondarycolor1;
+
+    label{
+        font-weight:bold;
+    }
 }
 
 
@@ -352,15 +419,15 @@ a:hover {
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .services {
-        .icon-text{
-            img{
-                width:40% !important;
-            }
 
+        .services-inner-container{
+            width:90%;
+        }
+
+        .icon-text{
             h6{
-                margin-top:20px !important;
-                padding:0 80px;
-                font-size:20px;
+                margin-top:10px !important;
+                font-size:18px;
             }
         }
     }
@@ -377,6 +444,8 @@ a:hover {
     }
 
     .banner_text_animation{
+        height:210px;
+
         .weusedatato{
             font-size:35px;
         }
@@ -396,13 +465,22 @@ a:hover {
         font-size:20px;
 
         .video-text-over{
-            //background:orange;
+            font-size:18px;
+            font-weight:300;
+            margin-top:18%;
         }
 
         .poweredbywatson{
-            font-style: italic;
-            font-size:15px;
+            font-size:14px;
         }
 
+    }
+    .clients{
+        img{
+            margin-bottom:15px;
+        }
+    }
+    .contact{
+        width:90%;
     }
 }

@@ -211,7 +211,7 @@ input {
     .weusedatato{
         color: $secondarycolor1;
         font-size:45px;
-        font-weight:bold;
+        font-weight:400;
         margin-bottom:10px;
     }
 
@@ -285,9 +285,12 @@ input {
         margin-top:300px !important;
     }
     
+
 }
 
-
+.dynamic-copy{
+    color:$secondarycolor1;
+}
 
 
 
@@ -321,7 +324,7 @@ input {
         margin-top:8%;
 
         span{
-            background:rgba(255,255,255,0.7);
+            background:rgba(255,255,255,0.5);
             color:$secondarycolor1;
             padding:0 15px;
             //@include border-radius(10px);

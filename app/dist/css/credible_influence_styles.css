@@ -156,7 +156,7 @@ input {
 .banner_text_animation .weusedatato {
   color: #2f3e79;
   font-size: 45px;
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 .banner_text_animation .copy {
@@ -209,6 +209,10 @@ input {
   margin-top: 300px !important;
 }
 
+.dynamic-copy {
+  color: #2f3e79;
+}
+
 .ai_watson {
   height: 280px;
   color: #21c6ca;
@@ -232,7 +236,7 @@ input {
   margin-top: 8%;
 }
 .ai_watson .video-text-over span {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.5);
   color: #2f3e79;
   padding: 0 15px;
 }

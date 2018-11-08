@@ -111,6 +111,18 @@ var Main = function () {
 
     var setServices = function() {
 
+        $('.services').find('.icon-text').mouseover(function(){
+            var iframe = $(this).find('iframe').contents();
+            iframe.find('.rolloverfill').css({ fill: "#ffffff" });
+            iframe.find('.rolloverstroke').css({ stroke: "#ffffff" });
+        });
+
+        $('.services').find('.icon-text').mouseout(function(){
+            var iframe = $(this).find('iframe').contents();
+            iframe.find('.rolloverfill').css({ fill: "#21C6CA" });
+            iframe.find('.rolloverstroke').css({ stroke: "#21C6CA" });
+        });
+
         $('.services').find('.icon-text').click(function(){
             //console.log($(this));
             var id = $(this).data('id');
@@ -138,6 +150,31 @@ var Main = function () {
 
 
 
+    var setUpContactForm = function() {
+
+        // $('.sendContactBtn').click(function(){
+        //     console.log("aqio");
+        // });
+
+        $("#contact-form").validate({
+            rules: {
+                yourname: "required",
+                youremail: {
+                    required: true,
+                    email: true
+                },
+                yourcompany: "required",
+            },
+            messages: {
+                yourname: "Please enter your first name.",
+                yourcompany: "Please enter your company.",
+                youremail: "Please enter a valid email address.",
+            }
+        });
+
+    };
+
+
     
 
     return {
@@ -145,6 +182,7 @@ var Main = function () {
             setServices();
         	addStoryAdvantage();
             setScrollTop();
+            setUpContactForm();
         }
     };
 }();

@@ -44,6 +44,11 @@ input {
     background:#eee !important;
 }
 
+label.error{
+    font-size:14px;
+    font-weight:300;
+    color:red;
+}
 
 
 
@@ -133,7 +138,7 @@ input {
 
 .navbar {
     font-size:18px;
-    font-weight:bold;
+    font-weight:300;
     background:$primarycolor !important;
 }
 
@@ -207,6 +212,7 @@ input {
     line-height:150%;
     height:190px;
     //background: green;
+    margin-top:30px;
 
     .weusedatato{
         color: $secondarycolor1;
@@ -306,14 +312,14 @@ input {
 
     video {
         position: absolute;
-        top: 0;
+        top: -200px;
         left: 0;
         width: 100%;
         //z-index:-100;
     }
 
     .video-text-over{
-        font-size:40px;
+        font-size:30px;
         font-weight:300;
         height:inherit;
         position:absolute;
@@ -321,19 +327,19 @@ input {
         width:100%;
         left:0;
         //background:orange;
-        margin-top:8%;
+        margin-top:7%;
 
         span{
-            background:rgba(255,255,255,0.5);
-            color:$secondarycolor1;
-            padding:0 15px;
+            //background:rgba(255,255,255,0.5);
+            //color:$secondarycolor1;
+            //padding:0 15px;
             //@include border-radius(10px);
         }
     }
 
     .poweredbywatson{
         font-style: italic;
-        font-size:24px;
+        font-size:18px;
         font-weight:300;
     }
 }
@@ -353,15 +359,33 @@ input {
 
     .icon-text{
         cursor:pointer;
+        //background:orange;
 
         img{
-            width:50% !important;
+            //width:50% !important;
         }
-
+        iframe{
+            width:128px;
+            height:128px;
+            cursor:pointer !important;
+            //background:orange;
+        }
+        svg{
+            cursor:pointer !important;
+        }
         h6{
             margin-top:10px !important;
             //background:orange;
         }
+    }
+    .icon-text::after{
+        content:"";
+        width:128px;
+        height:128px;
+        background:transparent;
+        position:absolute;
+        top:0;
+        left:78px;
     }
 
     .icon-text:hover{
@@ -379,7 +403,10 @@ input {
 .clients {
     padding:40px 0;
     background:$primarycolor;
-    color:white;
+    
+    img{
+        opacity:0.8;
+    }    
 }
 
 
@@ -395,6 +422,10 @@ input {
     label{
         font-weight:bold;
     }
+    label.error{
+        font-weight:300;
+    }
+
 }
 
 
@@ -416,11 +447,11 @@ footer{
 
     .buzzlogo{
         position:absolute;
-        top:-10px;
+        top:-2px;
         right:100px;
 
         img{
-            height:32px;
+            height:23px;
         }
     }
 }
@@ -487,7 +518,7 @@ footer{
         height:210px;
 
         .weusedatato{
-            font-size:35px;
+            font-size:28px;
         }
         .copy {
             font-size:25px;
@@ -504,10 +535,15 @@ footer{
         height:200px;
         font-size:20px;
 
+        video {
+            top: -10px;
+            width: 100%;
+        }
+
         .video-text-over{
             font-size:18px;
             font-weight:300;
-            margin-top:18%;
+            margin-top:15%;
         }
 
         .poweredbywatson{

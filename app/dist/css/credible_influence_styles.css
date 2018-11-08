@@ -22,6 +22,12 @@ input {
   background: #eee !important;
 }
 
+label.error {
+  font-size: 14px;
+  font-weight: 300;
+  color: red;
+}
+
 /* --------------------------------------- */
 /* BOOTSTRAP BUTTONS:  */
 /* --------------------------------------- */
@@ -103,7 +109,7 @@ input {
 /* --------------------------------------- */
 .navbar {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 300;
   background: #21c6ca !important;
 }
 
@@ -152,6 +158,7 @@ input {
   font-size: 23px;
   line-height: 150%;
   height: 190px;
+  margin-top: 30px;
 }
 .banner_text_animation .weusedatato {
   color: #2f3e79;
@@ -221,28 +228,23 @@ input {
 }
 .ai_watson video {
   position: absolute;
-  top: 0;
+  top: -200px;
   left: 0;
   width: 100%;
 }
 .ai_watson .video-text-over {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 300;
   height: inherit;
   position: absolute;
   z-index: 999;
   width: 100%;
   left: 0;
-  margin-top: 8%;
-}
-.ai_watson .video-text-over span {
-  background: rgba(255, 255, 255, 0.5);
-  color: #2f3e79;
-  padding: 0 15px;
+  margin-top: 7%;
 }
 .ai_watson .poweredbywatson {
   font-style: italic;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -254,11 +256,25 @@ input {
 .services .icon-text {
   cursor: pointer;
 }
-.services .icon-text img {
-  width: 50% !important;
+.services .icon-text iframe {
+  width: 128px;
+  height: 128px;
+  cursor: pointer !important;
+}
+.services .icon-text svg {
+  cursor: pointer !important;
 }
 .services .icon-text h6 {
   margin-top: 10px !important;
+}
+.services .icon-text::after {
+  content: "";
+  width: 128px;
+  height: 128px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 78px;
 }
 .services .icon-text:hover img {
   fill: red;
@@ -267,7 +283,9 @@ input {
 .clients {
   padding: 40px 0;
   background: #21c6ca;
-  color: white;
+}
+.clients img {
+  opacity: 0.8;
 }
 
 .contact {
@@ -278,6 +296,9 @@ input {
 .contact label {
   font-weight: bold;
 }
+.contact label.error {
+  font-weight: 300;
+}
 
 footer {
   font-size: 12px;
@@ -287,11 +308,11 @@ footer {
 }
 footer .buzzlogo {
   position: absolute;
-  top: -10px;
+  top: -2px;
   right: 100px;
 }
 footer .buzzlogo img {
-  height: 32px;
+  height: 23px;
 }
 
 /* --------------------------------------- */
@@ -319,7 +340,7 @@ footer .buzzlogo img {
     height: 210px;
   }
   .banner_text_animation .weusedatato {
-    font-size: 35px;
+    font-size: 28px;
   }
   .banner_text_animation .copy {
     font-size: 25px;
@@ -335,10 +356,14 @@ footer .buzzlogo img {
     height: 200px;
     font-size: 20px;
   }
+  .ai_watson video {
+    top: -10px;
+    width: 100%;
+  }
   .ai_watson .video-text-over {
     font-size: 18px;
     font-weight: 300;
-    margin-top: 18%;
+    margin-top: 15%;
   }
   .ai_watson .poweredbywatson {
     font-size: 14px;

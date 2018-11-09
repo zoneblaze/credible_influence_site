@@ -185,22 +185,33 @@ var Main = function () {
 
     var makeAPICallSendEmail = function() {
 
+
         var dataToSend = {
             name : $('input[name=name]').val(),
             email : $('input[name=email]').val(),
             company : $('input[name=company]').val(),
         };
 
-        console.log(dataToSend);
-
+        console.log("We are making the API call to => http://insights.buzzradar.com/api/contact-form");
+        console.log("data =>",dataToSend);
+        console.log("method => GET");
+        
         $.ajax({
             url: "http://insights.buzzradar.com/api/contact-form",
             type: 'GET',
             data: dataToSend,
             success: function(data){
                 console.log("Success Sending Email: ", data);
+                displaySuccessMessage("Congratulations the email is on its way!", "alert-success");
             }
         });
+
+    };
+
+
+    var displaySuccessMessage = function(message, type) {
+
+        $('.user-alerts').html('<div class="alert '+type+'">'+message+'</div>')
 
     };
 

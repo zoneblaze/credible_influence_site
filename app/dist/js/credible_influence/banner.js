@@ -43,7 +43,7 @@ var Banner = function () {
 				animateSentence(charIndex);
 			},50);
     	}else{
-    		console.log("Sentence is over!!!");
+    		//console.log("Sentence is over!!!");
     		//wait for a delay and then show the next one
     		sentenceIndex++;
     		if (sentenceIndex >= bannerCopyArray.length){

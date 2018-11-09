@@ -11,15 +11,15 @@ var Main = function () {
 
         {
             "title" : "Social Audits & Data Driven Strategy",
-            "copy" : "Trying to get a handle on your social performance and what consumers are saying about your brand? Credible Influence analysis of your social universe is industry leading, fast and cost effective. Using our proprietary Buzz Radar listening and analysis platform we can provide a true picture of the health of your brand and where you stand in your industry. Providing clear actionable recommendations for how to boost performance and ROI. We’ll create a report, recommendations and sit down to walk you through it all within 7.",
+            "copy" : "Trying to get a handle on your social performance and what consumers are saying about your brand? Credible Influence analysis of your social universe is industry leading, fast and cost effective. Using our proprietary Buzz Radar listening and analysis platform, we can provide a true picture of the health of your brand and where you stand in your industry. Providing clear actionable recommendations for how to boost performance and ROI. We’ll create a report, recommendations and sit down to walk you through it all within 7.",
         },
         {
             "title" : "Competitor Analysis",
-            "copy" : "Want to know where you stand with your competitors, where you have an advantage and what are they doing that you could learn from?  We execute comprehensive analysis of 5 nominated competitors alongside their products and social channels. Starting with a share of voice between your and your competitors we will then map out their whole social strategy and tactics. We’ll figure out what’s working for them and whats not from channel analysis, post performance and influencer campaigns. Finally we’ll psychometrically analyse their audiences and even benchmark their social ROI. The result a deep, comprehensive and meaningful insights and recommendations that will give you an a critical competitive advantage.",
+            "copy" : "Want to know where you stand with your competitors? Where you have an advantage? And what are they doing that you could learn from?  We execute comprehensive analysis of 5 nominated competitors alongside their products and social channels. Starting with a share of voice between you and your competitors, we will then map out their whole social strategy and tactics. We’ll figure out what’s working for them and what's not from channel analysis, post performance and influencer campaigns. Finally we’ll psychometrically analyse their audiences and even benchmark their social ROI. The result is deep, comprehensive, meaningful insights and recommendations that will give you a critical competitive advantage.",
         },
         {
             "title" : "Content Optimisation",
-            "copy" : "Trying to understand what content is engaging your audience and why? Our deep analysis of all your content goes way beyond standard analytical performance analysis. Using natural language and visual AI we create a detailed map of what  content engages your audience, what doesn’t and most importantly why. We also map your existing and targeted audiences and provide in depth recommendations on how to modify your content and publishing tactics for the best possible results.",
+            "copy" : "Trying to understand what content is engaging your audience and why? Our deep analysis of all your content goes way beyond standard analytical performance analysis. Using natural language and visual AI, we create a detailed map of what content engages your audience, what doesn’t and most importantly why. We also map your existing and targeted audiences and provide in depth recommendations on how to modify your content and publishing tactics for the best possible results.",
         },
         {
             "title" : "Partners Selection & Influencer Identification",
@@ -27,7 +27,7 @@ var Main = function () {
         },
         {
             "title" : "Brand Reputation Monitoring & Management",
-            "copy" : "Threats to a brand reputation can come unexpectedly at any time from any direction. They can start small and grow or they can come out of nowhere. We have developed best in class natural language and visual sentiment measurement and have provided reputation war rooms for Nike, Nestle, Pret a Manger and the Obama Administration. Our sentiment reports let you understand how your audience views you, how they react to your posts, what motivates that sentiment and who is driving it. Alongside this we provide reputation and crisis support and recommendations providing a steady hand to help you navigate choppy waters.",
+            "copy" : "Threats to a brand’s reputation can come unexpectedly at any time from any direction. They can start small and grow or they can come out of nowhere. We have developed best in class natural language and visual sentiment measurement and have provided reputation war rooms for Nike, Nestle, Pret a Manger and the Obama Administration. Our sentiment reports let you understand how your audience views you, how they react to your posts, what motivates that sentiment and who is driving it. Alongside this we provide reputation and crisis support and recommendations providing a steady hand to help you navigate choppy waters.",
         },
         {
             "title" : "Deep Audience Analysis",
@@ -35,7 +35,7 @@ var Main = function () {
         },
         {
             "title" : "Influencer Verification & Fraud Detection",
-            "copy" : "Finding the right influencers can be a real challenge. With up to 25% of influencers engaging in some level of fraud validating that they aren’t fluffing their engagement and reach with bots and fake followers is even tougher. Using our proprietary platform and years of experience we can help brands find the right influencers to chime with their message on a deep level. We help by providing advice on understand the best way to engage in a partnership and also using our AI influencer fraud detection we can tell if their reach and engagement is real and your investment is warranted and safe.",
+            "copy" : "Finding the right influencers can be a real challenge. With up to 25% of influencers engaging in some level of fraud, validating that they aren’t fluffing their engagement and reach with bots and fake followers is even tougher. Using our proprietary platform and years of experience, we can help brands find the right influencers to chime with their message on a deep level. We help by providing advice on understand the best way to engage in a partnership and also using our AI influencer fraud detection we can tell if their reach and engagement is real and your investment is warranted and safe.",
         },
         {
             "title" : "Tactical Social Content Advice & Consultation",
@@ -172,6 +172,9 @@ var Main = function () {
         });
 
         $('.sendContactBtn').click(function(){
+
+
+        displaySuccessMessage("Congratulations the email is on its way!", "error");
             if ($("#contact-form").valid()){
                 console.log("The Contact form is valid!!!");
                 makeAPICallSendEmail();
@@ -185,7 +188,6 @@ var Main = function () {
 
     var makeAPICallSendEmail = function() {
 
-
         var dataToSend = {
             name : $('input[name=name]').val(),
             email : $('input[name=email]').val(),
@@ -195,14 +197,14 @@ var Main = function () {
         console.log("We are making the API call to => http://insights.buzzradar.com/api/contact-form");
         console.log("data =>",dataToSend);
         console.log("method => GET");
-        
+
         $.ajax({
             url: "http://insights.buzzradar.com/api/contact-form",
             type: 'GET',
             data: dataToSend,
             success: function(data){
                 console.log("Success Sending Email: ", data);
-                displaySuccessMessage("Congratulations the email is on its way!", "alert-success");
+                displaySuccessMessage("Congratulations the email is on its way!", "success");
             }
         });
 
@@ -211,7 +213,11 @@ var Main = function () {
 
     var displaySuccessMessage = function(message, type) {
 
-        $('.user-alerts').html('<div class="alert '+type+'">'+message+'</div>')
+        if (type == "success") {
+            $('.user-alerts').html('<div class="alert alert-success">'+message+'</div>')
+        }else{
+            $('.user-alerts').html('<div class="alert alert-danger">'+message+'</div>')
+        }
 
     };
 

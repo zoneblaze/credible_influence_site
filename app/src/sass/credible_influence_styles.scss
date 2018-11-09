@@ -257,7 +257,7 @@ label.error{
     background:$secondarycolor1;
     padding: 30px 50px;
     font-size:23px;
-    color:$primarycolor;
+    color:white;
     font-weight:300;
     
     .white{
@@ -503,8 +503,11 @@ footer{
 
 
     .banner{
+        padding-top:70px;
+        padding-bottom:30px;
+
         img{
-            width:60%;
+            width:40%;
         }
     }
 
@@ -514,6 +517,8 @@ footer{
 
     .banner_text_animation{
         height:210px;
+        font-size:23px;
+        margin-top:5px;
 
         .weusedatato{
             font-size:28px;

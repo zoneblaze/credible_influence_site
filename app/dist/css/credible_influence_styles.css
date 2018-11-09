@@ -192,7 +192,7 @@ label.error {
   background: #2f3e79;
   padding: 30px 50px;
   font-size: 23px;
-  color: #21c6ca;
+  color: white;
   font-weight: 300;
 }
 .tagline .white {
@@ -326,8 +326,12 @@ footer .buzzlogo img {
     font-size: 18px;
   }
 
+  .banner {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
   .banner img {
-    width: 60%;
+    width: 40%;
   }
 
   .banner-inner-container {
@@ -336,6 +340,8 @@ footer .buzzlogo img {
 
   .banner_text_animation {
     height: 210px;
+    font-size: 23px;
+    margin-top: 5px;
   }
   .banner_text_animation .weusedatato {
     font-size: 28px;

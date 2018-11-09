@@ -151,10 +151,6 @@ var Main = function () {
 
     var setUpContactForm = function() {
 
-        // $('.sendContactBtn').click(function(){
-        //     console.log("aqio");
-        // });
-
         $("#contact-form").validate({
             rules: {
                 name: "required",
@@ -173,6 +169,7 @@ var Main = function () {
 
         $('.sendContactBtn').click(function(){
             if ($("#contact-form").valid()){
+                $('button.sendContactBtn').prop("disabled", true);
                 console.log("The Contact form is valid!!!");
                 makeAPICallSendEmail();
             }else{
@@ -200,6 +197,7 @@ var Main = function () {
             type: 'GET',
             data: dataToSend,
             success: function(data){
+                $('button.sendContactBtn').removeAttr("disabled");
                 console.log("Success Sending Email: ", data);
                 displaySuccessMessage("Congratulations the email is on its way!", "success");
             }

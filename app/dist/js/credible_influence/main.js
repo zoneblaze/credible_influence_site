@@ -55,10 +55,10 @@ var Main = function () {
             
             switch (type){
                 case 'story':
-                    copy = '<h2 class="mb-4 title text-center">OUR STORY</h2> <p>Data without context and empathy is meaningless.</p> <p>We’ve spent the last 6 years designing and developing <a  href="http://www.buzzradar.com" target="_blank">Buzz Radar</a> a real-time insight platform for some of the biggest brands in the world. As well as providing cutting edge insight technology our clients have often asked us to help translate that insight, provide context and data driven advice to inform their strategy. So we’ve created Credible Influence to do just that.</p> <p>Whether it’s helping guide engaging creative content or helping predict trends that provides brand with game changing insight. Everything we do is based on state of the art data science.</p>';
+                    copy = '<h2 class="mb-4 title text-center">OUR STORY</h2><p>Data without context and empathy is meaningless.</p> <p>We’ve spent the last 6 years designing and developing <a href="http://www.buzzradar.com" target="_blank">Buzz Radar</a> a real-time insight platform for some of the biggest brands in the world. As well as providing cutting edge insight technology, our clients have often asked us to help translate that insight, provide context and data driven advice to inform their strategy. So we’ve created Credible Influence to do just that.</p> <p>Whether it’s helping guide engaging creative content or helping predict trends that provides a brand with game changing insight, everything we do is based on state of the art data science.</p>';
                 break;
                 case 'advantage':
-                    copy = '<h2 class="mb-4 title text-center">OUR ADVANTAGES</h2> <p>Dashboards, algorithms and machine learning can only push data, correlations and insight to a certain point. In a world where technology has adapted faster than human behaviour, you need experts to provide a human touch to ensure you’re working with powerful insight that will help you to win</p> <p>The engine that powers and supports our team of strategists, tacticians and analysts is our proprietary <a href="http://www.buzzradar.com" target="_blank">Buzz Radar</a> platform. 6 years in the making and built using IBM Watson AI it allows us to capture, analyse and visualise vast amounts of data quickly and extract deep meaningful insight.</p> <p>Combined with our industry leading team we can quickly and easily uncover insights, spot trends and make predictions for our clients. Turning all that, unwieldy unconnected data into powerful actionable intelligence that drives ROI.</p>';
+                    copy = '<h2 class="mb-4 title text-center">OUR ADVANTAGES</h2><p>Dashboards, algorithms and machine learning can only push data, correlations and insights to a certain point. In a world where technology has adapted faster than human behaviour, you need experts to provide a human touch to ensure you’re working with powerful insights that will help you to win.</p> <p>The engine that powers and supports our team of strategists, tacticians and analysts is our proprietary <a href="http://www.buzzradar.com" target="_blank">Buzz Radar</a> platform. 6 years in the making and built using IBM Watson AI, it allows us to capture, analyse and visualise vast amounts of data quickly and extract deep meaningful insight.</p> <p>Combined with our industry leading team, we can quickly and easily uncover insights, spot trends and make predictions for our clients. Turning all that, unwieldy unconnected data into powerful actionable intelligence that drives ROI.</p>';
                 break;
             }
 
@@ -158,18 +158,58 @@ var Main = function () {
 
         $("#contact-form").validate({
             rules: {
-                yourname: "required",
-                youremail: {
+                name: "required",
+                email: {
                     required: true,
                     email: true
                 },
-                yourcompany: "required",
+                company: "required",
             },
             messages: {
-                yourname: "Please enter your first name.",
-                yourcompany: "Please enter your company.",
-                youremail: "Please enter a valid email address.",
+                name: "Please enter your first name.",
+                company: "Please enter your company.",
+                email: "Please enter a valid email address.",
             }
+        });
+
+        $('.sendContactBtn').click(function(){
+            if ($("#contact-form").valid()){
+                console.log("The Contact form is valid!!!");
+                makeAPICallSendEmail();
+            }else{
+                console.log("The Contact form is NOT valid!!!");
+            }
+        });
+
+    };
+
+
+    var makeAPICallSendEmail = function() {
+
+        var dataToSend = {
+            name : $('input[name=name]').val(),
+            email : $('input[name=email]').val(),
+            company : $('input[name=company]').val(),
+        };
+
+        console.log(dataToSend);
+
+        $.ajax({
+            url: "http://insights.buzzradar.com/api/contact-form",
+            type: 'GET',
+            data: dataToSend,
+            success: function(data){
+                console.log("Success Sending Email: ", data);
+            }
+        });
+
+    };
+
+
+    var setBannerCallToAction = function() {
+
+        $('.learn-more-btn').click(function(){
+            $('#our-story-btn').trigger('click');
         });
 
     };
@@ -183,6 +223,7 @@ var Main = function () {
         	addStoryAdvantage();
             setScrollTop();
             setUpContactForm();
+            setBannerCallToAction();
         }
     };
 }();

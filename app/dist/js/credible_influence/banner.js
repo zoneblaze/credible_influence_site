@@ -11,7 +11,7 @@ var Banner = function () {
 		"Help you build influencer and partnership strategies that deliver real results.",
 		"Help you create powerful strategies that cut through the noise.",
 		"Understand your social performance today and how to get it to where you want to go.",
-		"Predict the game changing trends that give you the  give you the advantage ahead of the competition.",
+		"Predict the game changing trends that give you the advantage ahead of the competition.",
 		"Create great performing content that hits the right person, with the right message at the right time.",
 		"Help you see how you stack up against your competitors.",
 		"Spot opportunities and potential weaknesses in your approach to ensure you stay one step ahead.",
@@ -56,6 +56,8 @@ var Banner = function () {
     	}
     	
     };
+
+
 
     
 

@@ -39,7 +39,7 @@ var Main = function () {
         },
         {
             "title" : "Tactical Social Content Advice & Consultation",
-            "copy" : "<p>We’ve assembled a leading team of strategists, tacticians, analysts and AI specialists that can advise you on anything Content, Social, Audience or AI related. Here are some of the questions we’ve been helping clients answer this month:</p><ul><li>“What is 9:16 vertical video and why should I be using it?”</li><li>“What new Instagram new features are a good fit for us to try testing”</li><li>“How will recent algorithmic changes on Facebook and Instagram affect my strategy?”</li><li>“With our organic reach in decline across all social channels, is all engagement worth paying for?”</li><li>“Which of IGTV and YouTube’s new aspect ratios are going to be the most effective for my brand”</li></ul>",
+            "copy" : "<p>We’ve assembled a leading team of strategists, tacticians, analysts and AI specialists that can advise you on anything Content, Social, Audience or AI related. Here are some of the questions we’ve been helping clients answer this month:</p><ul><li>“What is 9:16 vertical video and why should I be using it?”</li><li>“What new Instagram new features are a good fit for us to try testing?”</li><li>“How will recent algorithmic changes on Facebook and Instagram affect my strategy?”</li><li>“With our organic reach in decline across all social channels, is all engagement worth paying for?”</li><li>“Which of IGTV and YouTube’s new aspect ratios are going to be the most effective for my brand?”</li></ul>",
         },
     ];
     
@@ -211,10 +211,19 @@ var Main = function () {
     var displaySuccessMessage = function(message, type) {
 
         if (type == "success") {
+            resetInputs();
             $('.user-alerts').html('<div class="alert alert-success">'+message+'</div>')
         }else{
             $('.user-alerts').html('<div class="alert alert-danger">'+message+'</div>')
         }
+
+    };
+
+    var resetInputs = function() {
+
+        $('input[name=name]').val('');
+        $('input[name=email]').val('');
+        $('input[name=company]').val('');
 
     };
 

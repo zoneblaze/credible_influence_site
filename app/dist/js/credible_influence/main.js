@@ -211,8 +211,9 @@ var Main = function () {
     var displaySuccessMessage = function(message, type) {
 
         if (type == "success") {
-            resetInputs();
-            $('.user-alerts').html('<div class="alert alert-success">'+message+'</div>')
+            //resetInputs();
+            //$('.user-alerts').html('<div class="alert alert-success">'+message+'</div>')
+            $('#contact-form-holder').html('<img src="dist/images/thankyou.jpg" class="img-fluid"/>')
         }else{
             $('.user-alerts').html('<div class="alert alert-danger">'+message+'</div>')
         }

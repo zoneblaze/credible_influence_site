@@ -22,26 +22,25 @@ var Main = function () {
             "copy" : "Trying to understand what content is engaging your audience and why? Our deep analysis of all your content goes way beyond standard analytical performance analysis. Using natural language and visual AI we create a detailed map of what  content engages your audience, what doesn’t and most importantly why. We also map your existing and targeted audiences and provide in depth recommendations on how to modify your content and publishing tactics for the best possible results.",
         },
         {
-            "title" : "Partners selection and Influencer Identification",
+            "title" : "Partners Selection & Influencer Identification",
             "copy" : "Partnerships can be some of the biggest investments a brand can make. We help clients identify and validate partnership decisions using data. Our team conduct deep social analysis on sporting and cultural properties to help ensure it’s a good overall fit. We monitor and compare audience fit, fan engagement, growth and sentiment performance for a potential partner. We then use machine learning to make predictions on growth and future performance based on historical data to identify and verify marketing opportunities for our clients.",
         },
         {
-            "title" : "Influencer verification and fraud detection",
-            "copy" : "Finding the right influencers can be a real challenge. With up to 25% of influencers engaging in some level of fraud validating that they aren’t fluffing their engagement and reach with bots and fake followers is even tougher. Using our proprietary platform and years of experience we can help brands find the right influencers to chime with their message on a deep level. We help by providing advice on understand the best way to engage in a partnership and also using our AI influencer fraud detection we can tell if their reach and engagement is real and your investment is warranted and safe.",
+            "title" : "Brand Reputation Monitoring & Management",
+            "copy" : "Threats to a brand reputation can come unexpectedly at any time from any direction. They can start small and grow or they can come out of nowhere. We have developed best in class natural language and visual sentiment measurement and have provided reputation war rooms for Nike, Nestle, Pret a Manger and the Obama Administration. Our sentiment reports let you understand how your audience views you, how they react to your posts, what motivates that sentiment and who is driving it. Alongside this we provide reputation and crisis support and recommendations providing a steady hand to help you navigate choppy waters.",
         },
         {
             "title" : "Deep Audience Analysis",
             "copy" : "Understanding who your current audience is should be more than just an overview of basic demographics and interests. Our Audience Analyser uses watson AI to create psychometric profiles of every follower, influencer and motioner of a brand across social. Creating true understanding of your audience and a clear guide on how to engage and inspire them.",
         },
         {
-            "title" : "Brand Reputation Monitoring and Management",
-            "copy" : "Threats to a brand reputation can come unexpectedly at any time from any direction. They can start small and grow or they can come out of nowhere. We have developed best in class natural language and visual sentiment measurement and have provided reputation war rooms for Nike, Nestle, Pret a Manger and the Obama Administration. Our sentiment reports let you understand how your audience views you, how they react to your posts, what motivates that sentiment and who is driving it. Alongside this we provide reputation and crisis support and recommendations providing a steady hand to help you navigate choppy waters.",
+            "title" : "Influencer Verification & Fraud Detection",
+            "copy" : "Finding the right influencers can be a real challenge. With up to 25% of influencers engaging in some level of fraud validating that they aren’t fluffing their engagement and reach with bots and fake followers is even tougher. Using our proprietary platform and years of experience we can help brands find the right influencers to chime with their message on a deep level. We help by providing advice on understand the best way to engage in a partnership and also using our AI influencer fraud detection we can tell if their reach and engagement is real and your investment is warranted and safe.",
         },
         {
-            "title" : "Tactical social content advice and consultation",
+            "title" : "Tactical Social Content Advice & Consultation",
             "copy" : "<p>We’ve assembled a leading team of strategists, tacticians, analysts and AI specialists that can advise you on anything Content, Social, Audience or AI related. Here are some of the questions we’ve been helping clients answer this month:</p><ul><li>“What is 9:16 vertical video and why should I be using it?”</li><li>“What new Instagram new features are a good fit for us to try testing”</li><li>“How will recent algorithmic changes on Facebook and Instagram affect my strategy?”</li><li>“With our organic reach in decline across all social channels, is all engagement worth paying for?”</li><li>“Which of IGTV and YouTube’s new aspect ratios are going to be the most effective for my brand”</li></ul>",
         },
-
     ];
     
 

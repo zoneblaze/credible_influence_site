@@ -172,9 +172,6 @@ var Main = function () {
         });
 
         $('.sendContactBtn').click(function(){
-
-
-        displaySuccessMessage("Congratulations the email is on its way!", "error");
             if ($("#contact-form").valid()){
                 console.log("The Contact form is valid!!!");
                 makeAPICallSendEmail();

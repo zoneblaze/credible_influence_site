@@ -161,7 +161,7 @@ var Main = function () {
                 company: "required",
             },
             messages: {
-                name: "Please enter your first name.",
+                name: "Please enter your name.",
                 company: "Please enter your company.",
                 email: "Please enter a valid email address.",
             }

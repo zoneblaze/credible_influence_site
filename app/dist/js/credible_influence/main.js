@@ -131,7 +131,7 @@ var Main = function () {
             bootbox.dialog({
                     title: servicesArray[id].title,
                     message: '<img src="'+imgIcon.attr('src')+'" class="img-fluid tinyicon" />' + servicesArray[id].copy + '<img src="'+imgIcon.attr('src')+'" class="img-fluid watermark" />',
-                    size: 'medium',
+                    size: 'large',
                     closeButton: false,
                     buttons: {
                             cancel: {

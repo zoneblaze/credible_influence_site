@@ -71,12 +71,13 @@ var Main = function () {
                 }else{
                     applyCopyAnimate(copy)
                 }
+                storyAdvantageSelected = type;
             }else{
                 $('.story_advantage_copy').collapse('hide');                
                 storyAdvantageCollapse = false;
+                storyAdvantageSelected = null;
             }
 
-            storyAdvantageSelected = type;
             
         });
 
@@ -126,8 +127,6 @@ var Main = function () {
             //console.log($(this));
             var id = $(this).data('id');
             var imgIcon = $(this).find('img');
-            console.clear();
-            console.log("vamos a ver...", imgIcon,  imgIcon.get(0))
             bootbox.dialog({
                     title: servicesArray[id].title,
                     message: '<img src="'+imgIcon.attr('src')+'" class="img-fluid tinyicon" />' + servicesArray[id].copy + '<img src="'+imgIcon.attr('src')+'" class="img-fluid watermark" />',
@@ -230,6 +229,8 @@ var Main = function () {
     var setBannerCallToAction = function() {
 
         $('.learn-more-btn').click(function(){
+            storyAdvantageCollapse = false;
+            storyAdvantageSelected = null;
             $('#our-story-btn').trigger('click');
         });
 

@@ -86,7 +86,7 @@ var Nav = function () {
                 window.open(url);
             }
 
-            trackGAEvent('event','Navigation','clicked', value.label);
+            trackGAEvent('event','Navigation','clicked', slug);
 
         });
 

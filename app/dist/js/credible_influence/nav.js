@@ -35,6 +35,29 @@ var Nav = function () {
     ];
 
 
+
+
+    /**
+     * Google Analytics 
+     */
+    var trackGAEvent = function(hitType, category, action, label, value) {
+
+        console.log ("%c -> GA Event ---> ", "background:#ff0000;", hitType + " , " + category + " , " + action + " , " + label);
+
+        ga('send', {
+          hitType: hitType,
+          eventCategory: category,
+          eventAction: action,
+          eventLabel: label,
+        });
+
+    };
+
+
+
+
+
+
     /**
      * Render the Nav in the page
      */
@@ -62,6 +85,9 @@ var Nav = function () {
                 console.log("loading external URL ->", url);
                 window.open(url);
             }
+
+            trackGAEvent('event','Navigation','clicked', value.label);
+
         });
 
     };

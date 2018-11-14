@@ -11,7 +11,7 @@ var Main = function () {
 
         {
             "title" : "Social Audits & Data Driven Strategy",
-            "copy" : "Trying to get a handle on your social performance and what consumers are saying about your brand? Credible Influence analysis of your social universe is industry leading, fast and cost effective. Using our proprietary Buzz Radar listening and analysis platform, we can provide a true picture of the health of your brand and where you stand in your industry. Providing clear actionable recommendations for how to boost performance and ROI. We’ll create a report, recommendations and sit down to walk you through it all within 7.",
+            "copy" : "Trying to get a handle on your social performance and what consumers are saying about your brand? Credible Influence analysis of your social universe is industry leading, fast and cost effective. Using our proprietary Buzz Radar listening and analysis platform, we can provide a true picture of the health of your brand and where you stand in your industry. Providing clear actionable recommendations for how to boost performance and ROI. We’ll create a report, recommendations and sit down to walk you through it all within 7 days.",
         },
         {
             "title" : "Competitor Analysis",
@@ -42,6 +42,24 @@ var Main = function () {
             "copy" : "<p>We’ve assembled a leading team of strategists, tacticians, analysts and AI specialists that can advise you on anything Content, Social, Audience or AI related. Here are some of the questions we’ve been helping clients answer this month:</p><ul><li>“What is 9:16 vertical video and why should I be using it?”</li><li>“What new Instagram new features are a good fit for us to try testing?”</li><li>“How will recent algorithmic changes on Facebook and Instagram affect my strategy?”</li><li>“With our organic reach in decline across all social channels, is all engagement worth paying for?”</li><li>“Which of IGTV and YouTube’s new aspect ratios are going to be the most effective for my brand?”</li></ul>",
         },
     ];
+
+
+
+
+    var trackGAEvent = function(hitType, category, action, label, value) {
+
+        console.log ("%c -> GA Event ---> ", "background:#ff0000;", hitType + " , " + category + " , " + action + " , " + label);
+
+        ga('send', {
+          hitType: hitType,
+          eventCategory: category,
+          eventAction: action,
+          eventLabel: label,
+        });
+
+    };
+
+
     
 
     var addStoryAdvantage = function(){
@@ -54,9 +72,11 @@ var Main = function () {
             
             switch (type){
                 case 'story':
+                    trackGAEvent('event','Our Story Button','clicked','true');
                     copy = '<h2 class="mb-4 title text-center">OUR STORY</h2><p>Data without context and empathy is meaningless.</p> <p>We’ve spent the last 6 years designing and developing <a href="http://www.buzzradar.com" target="_blank">Buzz Radar</a> a real-time insight platform for some of the biggest brands in the world. As well as providing cutting edge insight technology, our clients have often asked us to help translate that insight, provide context and data driven advice to inform their strategy. So we’ve created Credible Influence to do just that.</p> <p>Whether it’s helping guide engaging creative content or helping predict trends that provides a brand with game changing insight, everything we do is based on state of the art data science.</p>';
                 break;
                 case 'advantage':
+                    trackGAEvent('event','Our Advantage Button','clicked','true');
                     copy = '<h2 class="mb-4 title text-center">OUR ADVANTAGES</h2><p>Dashboards, algorithms and machine learning can only push data, correlations and insights to a certain point. In a world where technology has adapted faster than human behaviour, you need experts to provide a human touch to ensure you’re working with powerful insights that will help you to win.</p> <p>The engine that powers and supports our team of strategists, tacticians and analysts is our proprietary <a href="http://www.buzzradar.com" target="_blank">Buzz Radar</a> platform. 6 years in the making and built using IBM Watson AI, it allows us to capture, analyse and visualise vast amounts of data quickly and extract deep meaningful insight.</p> <p>Combined with our industry leading team, we can quickly and easily uncover insights, spot trends and make predictions for our clients. Turning all that, unwieldy unconnected data into powerful actionable intelligence that drives ROI.</p>';
                 break;
             }
@@ -127,6 +147,7 @@ var Main = function () {
             //console.log($(this));
             var id = $(this).data('id');
             var imgIcon = $(this).find('img');
+            trackGAEvent('event','Service Thumb Button','clicked',servicesArray[id].copy);
             bootbox.dialog({
                     title: servicesArray[id].title,
                     message: '<img src="'+imgIcon.attr('src')+'" class="img-fluid tinyicon" />' + servicesArray[id].copy + '<img src="'+imgIcon.attr('src')+'" class="img-fluid watermark" />',
@@ -199,6 +220,7 @@ var Main = function () {
                 $('button.sendContactBtn').removeAttr("disabled");
                 console.log("Success Sending Email: ", data);
                 displaySuccessMessage("Congratulations the email is on its way!", "success");
+                trackGAEvent('event','Contact Form','submitted','success');
             }
         });
 
@@ -232,6 +254,7 @@ var Main = function () {
             storyAdvantageCollapse = false;
             storyAdvantageSelected = null;
             $('#our-story-btn').trigger('click');
+            trackGAEvent('event','Learn More Button','clicked','true');
         });
 
     };

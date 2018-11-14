@@ -147,7 +147,7 @@ var Main = function () {
             //console.log($(this));
             var id = $(this).data('id');
             var imgIcon = $(this).find('img');
-            trackGAEvent('event','Service Thumb Button','clicked',servicesArray[id].copy);
+            trackGAEvent('event','Service Thumb Button','clicked',servicesArray[id].title);
             bootbox.dialog({
                     title: servicesArray[id].title,
                     message: '<img src="'+imgIcon.attr('src')+'" class="img-fluid tinyicon" />' + servicesArray[id].copy + '<img src="'+imgIcon.attr('src')+'" class="img-fluid watermark" />',
